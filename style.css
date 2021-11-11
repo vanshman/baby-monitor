@@ -1,0 +1,24 @@
+body{
+    background: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.heading
+{
+font-size: 23px;
+width: 100%;
+margin: 0px;
+}
+
+#status
+{
+font-size: 18px;
+}
+#start, #status, #number_of_objects{
+    font-size: 10px;
+}
+canvas{
+    border: black solid 2px;
+    margin-top: 250px;
+}
