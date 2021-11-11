@@ -30,12 +30,18 @@ function draw(){
             {
                 document.getElementById("objectStatus").innerHTML = "Baby found";
             }
+            else{
+                document.getElementById("objectStatus").innerHTML = "Baby not found"; 
+            }
             fill(r, g, b)
             percent = floor(objects[i].confidence * 100);
             text(objects[i].label + " " + percent + "%", objects[i].x + 15, objects[i].y + 15);
             noFill();
             stroke(r, g, b);
             rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
+        }
+        if(objects.length == 0){
+            document.getElementById("objectStatus").innerHTML = "Baby not found"; 
         }
     }
 }
@@ -50,6 +56,6 @@ function gotResult(error, results){
     if(error){
         console.log(error)
     }
-    console.log(results)
     objects = results
+    console.log(objects)
 }
